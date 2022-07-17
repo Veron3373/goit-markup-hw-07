@@ -418,56 +418,56 @@
         </svg>
       </button>
 
-      <form class="register-form">
-        <label class="register-form__user">
-          <strong class="register-form__position-text">
+      <form class="register">
+        <label class="register-position">
+          <strong class="register-position__text">
             Оставьте свои данные, мы вам перезвоним
           </strong>
         </label>
 
-        <label class="register-form__user">
-          <span class="register-position">Имя</span>
+        <label class="register-position">
+          <span class="register-position__mine">Имя</span>
           <input class="register-position__input" type="text" name="user-name" minlength="3" required>
-          <span class="register-btn__person">
+          <span class="register-position__person">
             <svg width="12px" height="12px">
               <use href="./images/icons.svg#icon-man"></use>
             </svg>
           </span>
-          <span class="register-eror-text">Минимальная длина 3-символа</span>
-          <svg class="register-btn__eror-no-eror">
+          <span class="register-position__text--eror">Минимальная длина 3-символа</span>
+          <svg class="register-position__eror-no-eror">
             <use class="modal-btn__eror" href="./img/icons.svg#icon-eror"></use>
             <use class="modal-btn__non-eror" href="./img/icons.svg#icon-no-eror"></use>
           </svg>
         </label>
-        <label class="register-form__user">
-          <span class="register-position">Телефон</span>
+        <label class="register-position">
+          <span class="register-position__mine">Телефон</span>
           <input class="register-position__input" id="user-name-tel" type="tel" name="user-name-tel" required>
-          <span class="register-btn__person">
+          <span class="register-position__person">
             <svg width="13px" height="13px">
-              <use class="modal-btn-use phone-icon" href="./images/icons.svg#icon-phone-2"></use>
+              <use href="./images/icons.svg#icon-phone-2"></use>
             </svg>
           </span>
-          <svg class="register-btn__eror-no-eror">
+          <svg class="register-position__eror-no-eror">
             <use class="modal-btn__eror" href="./img/icons.svg#icon-eror"></use>
             <use class="modal-btn__non-eror" href="./img/icons.svg#icon-no-eror"></use>
           </svg>
         </label>
-        <label class="register-form__user">
-          <span class="register-position">Почта</span>
+        <label class="register-position">
+          <span class="register-position__mine">Почта</span>
           <input class="register-position__input" autocomplete="on" type="email" name="user-name-email" minlength="3"
             required>
-          <span class="register-btn__person">
+          <span class="register-position__person">
             <svg width="15px" height="12px">
-              <use class="modal-btn-use envelope-icon" href="./images/icons.svg#icon-e-mail"></use>
+              <use href="./images/icons.svg#icon-e-mail"></use>
             </svg>
           </span>
         </label>
-        <label class="register-form__user">
-          <span class="register-position">Комментарий</span>
+        <label class="register-position">
+          <span class="register-position__mine">Комментарий</span>
           <textarea class="coments register-position__input" name="user-name-text"
             placeholder="Введите текст"></textarea>
         </label>
-        <label class="consent__user">
+        <label class="consent">
           <input class="consent__checkbox" type="checkbox" name="policy" value="policy">
           <span class="consent__consent-mail-checkbox"></span>Соглашаюсь с рассылкой и принимаю
           <a class="consent__mail" href="https://goit.ua/agreement/" target="blank" rel="noopener noreferrer">Условия

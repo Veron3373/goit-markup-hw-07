@@ -42,6 +42,7 @@
   border-radius: 4px;
 
   transition: transform var(--transition-timing-function);
+
 }
 // Знак вихода
 .modal__btn-close{
@@ -78,3 +79,6 @@
 
 }
 
+.backdrop.is-hidden > .modal {
+  transform: translate(-50%, -50%) scale(1.1);
+}

@@ -1,6 +1,5 @@
 // Риєстрація на формі
-.register-form{
-  &__user {
+.register-position{
     display: flex;
     position: relative;
   &:checked .register-position__input,
@@ -10,18 +9,114 @@
   
   }
   
-  &:checked .register-btn__person,
-  &:focus-within .register-btn__person {
+  &:checked .register-position__person,
+  &:focus-within .register-position__person {
     fill: var(--accent-color);
   
   }
   &:nth-child(-n + 4) {
     margin-bottom: 28px;
   }
-  }
+
+  // позиціонування
+  &__mine{
+    position: absolute;
+  
+    width: 100%;
+  
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  
+    color: var(--primary-text-color);
+  
+    transform: translateY(-130%);
 }
 
-.register-form__position-text{
+  &__input{
+    width: 100%;
+  
+    height: 40px;
+  
+    border: var(  --color-register-position-input);
+    border-radius: 4px;
+  
+    transition: border-color var(--transition-timing-function),
+  
+    fill var(--transition-timing-function);
+    
+    padding: 12px 12px 12px 42px;
+  
+    display: flex;  
+
+    &:focus:invalid ~ .register-position__text--eror,
+    &:focus:invalid ~ .register-position__eror-no-eror > .modal-btn__eror{
+      opacity: 1;
+    }
+    
+    &:valid ~ .register-position__eror-no-eror > .modal-btn__non-eror{
+      opacity: 1;
+  }
+  }
+
+  &__text--eror{
+    @extend %register;
+
+    right: 50px;
+    top: 50%;
+    
+    transform: translateY(-50%);
+  
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  
+    color: var(--register-eror-text);
+  
+    opacity: 0;
+  
+    transition: color var(--transition-timing-function);
+}
+
+  &__eror-no-eror {
+    @extend %register;
+
+    width: 15px;
+    height: 15px;
+  
+    right: 10px;
+    bottom: 13px;
+}
+   // Позиція CVG
+    &__person{
+      position: absolute;
+    
+      display: flex;
+    
+      width: 18px;
+      height: 18px;
+    
+      left: 12px;
+      top: 50%;
+    
+      transform: translateY(-50%);
+    
+      transition: fill var(--accent-colorn);
+    
+      justify-content: center;
+      align-items: center;
+
+}
+}
+
+// Нанис тексту
+.register-position__text{
   display: flex;
 
   width: 448px;
@@ -41,4 +136,194 @@
   color: var(--titel-link-color);
 }
 
-// текст форми ім'я eror
+// Хрестик
+.modal-btn__eror{
+  width: 15px;
+  height: 15px;
+
+  right: 10px;
+  bottom: 13px;
+
+  fill: var(--emphasizing-cardcolor);
+  opacity: 0;
+
+  transition: fill var(--transition-timing-function);
+}
+
+// Галочк
+.modal-btn__non-eror{
+  width: 15px;
+  height: 15px;
+
+  right: 10px;
+  bottom: 13px;
+
+  fill: var(--modal-btn__non-eror);
+
+  opacity: 0;
+
+  transition: fill var(--transition-timing-function);
+}
+
+// Коментар
+.coments{
+  resize: none;
+
+  min-width:448px;
+  min-height: 120px;
+  padding: 12px 16px;
+}
+
+
+.consent{
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+
+  margin-top: 20px;
+
+
+  user-select: none;
+
+  &__checkbox {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+
+  &:hover + .consent__consent-mail-checkbox {
+
+    border: 2px solid var(--accent-color);
+}
+
+  &:checked + .consent__consent-mail-checkbox {
+    border-color: transparent;
+  
+    background-color: var(--accent-color);
+  
+    background-size: contain;
+    background-origin: border-box;
+}
+}
+
+// Умови договорю
+&__mail{
+  position: relative;
+
+  color: var(--accent-color);
+
+  margin-left: 6px;
+
+  &::after{
+  content: '';
+
+  position: absolute;
+
+  display: block;   
+
+  width: 100%;
+  height: 0.7px;
+
+  left: 0;
+  bottom: -10;
+
+  background-color: currentColor;
+
+}
+}
+
+&__consent-mail-checkbox {
+  display: inline-block;
+
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid #212121;
+
+  border-radius: 4px;
+  margin-right: 7px;
+
+  transition: border-color
+  var(--transition-timing-function),
+  background-color var(--transition-timing-function);
+
+  background-image: url(../img/check.svg);
+
+  background-repeat:no-repeat;
+
+  background-size: cover;
+
+}
+}
+
+// Кнопка
+.modal-btn__submit{
+  width: 200px;
+  height: 50px;
+
+  background: var(--button-hero-two);
+  box-shadow: var(--button-hover-button-box-shadow-btn);
+
+  color: var(--primary-bg-color);
+
+  border-radius: 4px;
+  border: 0;
+
+  cursor: pointer;
+
+  padding: 0;
+  margin:30px 124px 0px 124px;
+
+  transition: background-color
+  var(--transition-timing-function),
+  box-shadow
+  var(--transition-timing-function);
+
+  &:hover,
+  &:focus{
+
+  background-color: var(--button-btn-two);
+  box-shadow: var(--button-hover-button-box-shadow-btn);
+  cursor: pointer;
+}
+}
+
+
+
+.modal-btn__submit-send{
+
+  font-family: 'Roboto';
+  font-style: normal;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  
+  letter-spacing: 0.06em;
+}
+
+/* .consent-btn-svg{
+  align-items: center;
+
+  background-color:var(--button-hero-two);
+  border-radius: 2px;
+
+  background-image: url(../img/check.svg);
+
+} */
