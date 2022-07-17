@@ -1,0 +1,16 @@
+/* Футер */
+.footer {
+  background-color: var(--footer-hero-bg-color);
+
+  padding: 60px 0;
+
+  /* -------- */
+&__container {
+  display: flex;
+  align-items: baseline;
+  margin-top: 0;
+  margin-bottom: 0;
+
+    @extend %container;
+}
+}

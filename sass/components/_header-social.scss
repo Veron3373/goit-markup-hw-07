@@ -1,0 +1,62 @@
+
+.social{
+  margin: 0px 0px 0px 70px ;
+  
+  &__text--title{
+    @extend %text--title;
+  }
+  
+  &__list{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  
+    width: 206px;
+  
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.social__animation--pulse{
+  @extend %list;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 44px;
+  width: 44px;
+
+  border-radius: 50%;
+  
+  background-color: var(--footer-social);
+
+  transition: background-color
+  var(--transition-timing-function);
+}
+
+/* Пульсуюча анімація */
+.social__animation--pulse:hover {
+  animation:radar 1.5s linear infinite;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+@keyframes radar {
+  0% {
+  transform:scale(.9,.9);
+  opacity:1
+  }
+  100% {
+  transform:scale(1.5,1.5);
+  opacity:0.2
+  }
+}
+// SVG
+.social__image{
+  fill: var(--colore-info);
+
+  height: 20px;
+  width: 20px;
+}

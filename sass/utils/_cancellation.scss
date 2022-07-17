@@ -1,0 +1,129 @@
+/* списки */
+%list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* посилання */
+%link {
+  text-decoration: none;
+}
+
+/* заголовки */
+%titel {
+  color: var(--titel-link-color);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+// приховати текст
+.hidden {
+  display: none;
+}
+
+/* контейнер */
+%container {
+  margin-right: auto;
+  margin-left: auto;
+
+  width: 1200px;
+  
+  padding-left: 15px;
+  padding-right: 15px;
+}
+// секція
+%section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+// Позиціонування адреса
+%positioning {
+  position: relative;
+}
+
+// Синій ховер
+%footer-hover:hover,
+%footer-hover:focus{
+  color: var(--accent-color);
+}
+// Підкреслення
+  %footer-after::after{
+  content: '';
+  width: 0;
+  height: 2.5px;
+  position: absolute;
+  bottom: -2.5px;
+  left: 0;
+  background: var(--accent-color);
+  transition: var(--transition);
+  }
+
+  %footer-after:hover::after{
+    width: 100%;
+  }  
+
+  %footer-after::after:hover,
+  %footer-after::after:focus{
+  content: '';
+
+  position: absolute;
+
+  display: block;   
+
+  width: 100%;
+  height: 4px;
+
+  background-color: var(--accent-color);
+  border-radius: 2px;
+
+  left: 0;
+  bottom: 5px;
+}
+
+  %text--title{
+    display: flex;
+  
+    margin-bottom: 20px;
+  
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  
+    color: var(--colore-info);
+  }
+
+  // кнопка героя
+%btn {
+  padding: 10px 32px;
+  
+  border: none;
+  border-radius: 4px;
+
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  transition: background-color
+  var(--transition-timing-function),
+  box-shadow
+  var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-hero-two);
+    box-shadow: var(--button-hover-button-box-shadow);
+    cursor: pointer;
+}
+}

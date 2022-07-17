@@ -1,0 +1,44 @@
+// Риєстрація на формі
+.register-form{
+  &__user {
+    display: flex;
+    position: relative;
+  &:checked .register-position__input,
+  &:focus-within .register-position__input {
+    border-color: var(--accent-color);
+    outline: 0;
+  
+  }
+  
+  &:checked .register-btn__person,
+  &:focus-within .register-btn__person {
+    fill: var(--accent-color);
+  
+  }
+  &:nth-child(-n + 4) {
+    margin-bottom: 28px;
+  }
+  }
+}
+
+.register-form__position-text{
+  display: flex;
+
+  width: 448px;
+  height: 23px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+
+  text-align: center;
+  justify-content: center;
+
+  letter-spacing: 0.03em;
+
+  color: var(--titel-link-color);
+}
+
+// текст форми ім'я eror

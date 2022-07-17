@@ -1,0 +1,96 @@
+/* Команда */
+.card-set__contaiter{
+    @extend %container;  
+}
+
+.card-set {
+  background-color: var(--secondary-bg-color);
+
+  @extend %section;
+
+    &___contaiter{
+      @extend %container;
+    }
+}
+
+// Текст
+.card-set__titel--text {
+  margin-bottom: 50px;
+
+  @extend %titel;
+}
+
+.card-set__item--card {
+  background-color: var(--primary-bg-color);
+  // width: 270px;
+  // height: 420px;
+  box-shadow: var(--card-background-color-box-shadow);
+  border-radius: 0px 0px 4px 4px;
+
+}
+// Текст
+.card-set__text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.set-info{
+  display: flex;
+  margin: 16px 32px 30px 32px; 
+  padding: 0;
+  justify-content:space-between;
+  
+  &__link{
+    display: flex;
+  
+    height: 44px;
+    width: 44px;
+    
+    transform: rotate(0deg);
+    
+    border-radius: 30px;
+    color: var(--primary-bg-color);
+    fill: var(--accent-fill);
+  
+    justify-content: center;
+    align-items: center;
+  
+    transition:transform
+    var(--transition-timing-function),
+    background-color
+    var(--transition-timing-function),
+    fill
+    var(--transition-timing-function);
+
+  }
+
+  &__link:hover,
+  &__link:focus{
+    border-radius: 50%;
+
+  background-color: var(  --accent-color);
+
+  fill: currentColor;
+
+  transform:rotate(360deg);
+
+  }
+}
+// розмір
+.set-info__link-networks{
+  height: 20px;
+  width: 20px;
+}
+// текст
+.card-set__item--text-titel {
+  @extend %titel;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+}

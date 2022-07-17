@@ -1,0 +1,24 @@
+/* Логотип загальні налаштування */
+.logo {
+  color: var(--logo-up-color);
+  margin-right: 93px;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  width: 145px;
+  height: 31px;
+
+  @extend %link ;
+  
+//  Лого  хедер
+  &__info--accent {
+  color: var(--accent-color);
+}
+
+}
+
+//  Лого  футер
+.logo__info {
+  color: var(--primary-bg-color);
+}

@@ -1,0 +1,24 @@
+@import "./utils/variables";
+@import "./utils/base";
+@import "./utils/cancellation";
+
+@import "./components/header";
+@import "./components/logo";
+@import "./components/header-nav";
+@import "./components/header-contacts";
+
+@import "./components/hero";
+@import "./components/modal";
+@import "./components/modal-form";
+@import "./components/flex-cards"; // ?  Змінити на міксин
+@import "./components/benefits";
+@import "./components/our-work";
+@import "./components/team";
+@import "./components/clients";
+@import "./components/footer";
+@import "./components/address";
+@import "./components/header-social";
+
+@import "./components/galerry-btn";
+@import "./components/galerry";
+@import "./components/subscription";

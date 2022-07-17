@@ -1,0 +1,44 @@
+/* Робота  */
+.card-list{
+  @extend %section;
+
+  @extend %container;
+}
+
+.card-list__titel {
+  margin-bottom: 50px;
+  
+  @extend %titel;
+}
+
+.card-list__list{
+  @extend %list;
+}
+
+/* текст на картинках */
+.card-list__text{
+  display: flex;
+
+  position: absolute;
+
+  width: 370px;
+  height: 70px;
+
+  overflow: hidden;
+
+  bottom: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  background-color: var(--colore-img);
+  color: var(--primary-bg-color);
+}

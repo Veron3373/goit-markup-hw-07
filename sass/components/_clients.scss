@@ -1,0 +1,62 @@
+// Постійні клієнгти
+.customer{
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+    // Текст
+    &__titel{
+        @extend %titel;
+    }
+
+    /* Постійні клієнти */
+    &__list{
+      @extend %list;
+
+      margin-top: 50px;
+      display: flex;
+}
+
+}
+.container-block{
+    @extend %container;
+
+}
+.customer__item{
+  &:not(:last-child){
+    margin-right: 30px;
+}
+}
+
+.customer__link{
+  display: flex;
+
+  width: 170px;
+  height: 92px;
+
+  transform: scale3d(1, 1, 1);
+
+  border: 1px solid var(--accent-fill);
+  border-radius: 4px;
+  color: var(--accent-fill);
+
+  justify-content: center;
+  align-items: center;
+
+  transition: transform
+  var(--transition-timing-function),
+  border-color
+  var(--transition-timing-function),
+  color
+  var(--transition-timing-function);
+
+  fill: currentColor;
+
+&:hover{
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+
+  transform: scale3d(1.2, 1.2, 1.2);
+
+  }
+}
+

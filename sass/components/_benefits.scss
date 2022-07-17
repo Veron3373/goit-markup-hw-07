@@ -1,0 +1,63 @@
+// Наші переваги
+
+.container{
+  @extend %container;  
+  }
+
+.advantages {
+  @extend %section ;
+
+  padding-bottom: 0;
+
+}
+
+// При ховері + афтор
+.card-set__list--card{
+  @extend %positioning;
+
+  &:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  &::after{
+    content: '';
+    width: 0;
+    height: 2.5px;
+    position: absolute;
+    bottom: -2.5px;
+    right: 0;
+    background: var(--emphasizing-cardcolor);
+    transition: var(--transition);
+  }
+}
+
+/* SVG */
+.card-set__section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  background-color: var(--secondary-bg-color);
+  border-radius: 4px;
+
+  height: 120px;
+}
+
+// Текст
+.card-set__titel {
+  @extend %titel;
+
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: start;
+}
+.card-photo {
+    display: flex;
+    width: 70px;
+    height: 70px;
+}

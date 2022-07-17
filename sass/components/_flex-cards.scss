@@ -1,0 +1,29 @@
+
+/* сітка із застосуванням flex-box по 4-ри елемента     */
+.card-set__list {
+  display: flex;
+  margin: calc(-1 * var(--indent) / 2);
+
+  @extend %list;
+
+  .card-set__item {
+    flex-basis: calc((100% - var(--indent) *  var(--items-adv)) / var(--items-adv));
+    margin: calc(var(--indent) / 2);
+}
+}
+
+
+/* сітка із застосуванням flex-box по 3-ри елемента     */
+.card-list__list {
+  display: flex;
+  margin: calc(-1 * var(--indent) / 2);
+
+  .card-list__item {
+    position: relative;
+    flex-basis: calc((100% - var(--indent) *  var(--items-work)) / var(--items-work));
+    margin: calc(var(--indent) / 2);
+}
+}
+
+
+

@@ -1,0 +1,44 @@
+/* Герой */
+.hero {
+  padding: 200px 0;
+  margin-right: auto;
+  margin-left: auto;
+
+  max-height: 600px;
+  max-width: 1600px;
+  background-color: var(--footer-hero-bg-color);
+
+  background-image: linear-gradient(var(--linear-gradient), var(--linear-gradient)),
+  url("../img/hero.jpg");
+  background-repeat: no-repeat;
+  background-position:center ;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+}
+// текс героя
+.hero__titel {
+  margin-top: 0px;
+  margin-bottom: 30px;
+
+  color: var(--primary-bg-color);
+
+  font-weight: 900;
+  font-size: 44px;
+  width: 696px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+}
+// кнопка героя
+.btn {
+  @extend %btn;
+}

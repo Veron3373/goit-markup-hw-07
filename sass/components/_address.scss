@@ -1,0 +1,37 @@
+// Адреса
+.address {
+  @extend %list;
+
+  font-style: normal;
+  margin-top: 20px;
+
+  &__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.address__text {  
+    @extend %footer-after;
+    @extend %footer-hover;
+    @extend %positioning;
+
+    color: var(--primary-bg-color);
+    cursor: pointer;
+    font-style: normal;
+  
+    transition: color
+    var(--transition-timing-function);
+  }
+.address__link{
+    @extend %positioning;
+    @extend %link;
+    @extend %footer-hover;
+    @extend %footer-after;
+
+  color: var(--address-secondary-color);
+
+  display: inline-block;
+  margin-top: 9px;
+}
