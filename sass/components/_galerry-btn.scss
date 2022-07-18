@@ -17,6 +17,10 @@
 
 }
 
+.hidden{
+  @extend %hidden;
+}
+
 .galerry__item{
   &:not(:last-child) {
     

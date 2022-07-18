@@ -100,6 +100,8 @@
 }
 
 .card-list__info {
+  @extend %titel;
+
   margin-bottom: 4px;
 
   font-weight: 700;
